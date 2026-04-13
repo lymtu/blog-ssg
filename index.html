@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/root.css" />
+    <link rel="stylesheet" href="/src/main.css" />
+    <title>主页</title>
+
+    <link rel="stylesheet" href="/src/assets/style/index.css" />
+    <link rel="stylesheet" href="/src/assets/style/mdList.css" />
+    <meta name="description" content="Lymtu的博客，记录一些东西。" />
+    <script type="module" src="/src/components/header/index.js"></script>
+    <script type="module" src="/src/components/typewriter/index.js"></script>
+  </head>
+  <body>
+    <my-header></my-header>
+    <main>
+      <section class="home-container container">
+        <div class="typewriter-container">
+          <my-typewriter></my-typewriter>
+        </div>
+
+        <div class="avatar-container">
+          <div class="avatar">
+            <img src="/src/assets/img/me.png" alt="Avatar" />
+          </div>
+        </div>
+
+        <div class="links-container">
+          <ul>
+            <li>
+              <a
+                href="https://github.com/lymtu"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/src/assets/img/github.svg" alt="GitHub"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container list-container">
+        <div class="title-container">
+          <h2>近期文章</h2>
+          <a href="/archive" rel="referrer">查看更多</a>
+        </div>
+        <ul class="list">
+          <!-- MD-LIST -->
+        </ul>
+      </section>
+    </main>
+    <footer>- End -</footer>
+  </body>
+</html>

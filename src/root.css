@@ -1,0 +1,75 @@
+:root {
+  --text-color: #000;
+  --background-color: #fff;
+  --link-color: #006ece;
+  --shadow-color: #0003;
+  --avatar-bg-color: #fff;
+  --btn-bg-color: #f0f0f0;
+  --btn-hover-bg-color: #f6f6f6;
+  --btn-active-bg-color: #f3f3f3;
+  --contribution-default-bgColor-0: var(--btn-hover-bg-color);
+  --contribution-default-bgColor-1: #aceebb;
+  --contribution-default-bgColor-2: #4ac26b;
+  --contribution-default-bgColor-3: #2da44e;
+  --contribution-default-bgColor-4: #116329;
+  --light: block;
+  --dark: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff;
+    --background-color: #000;
+    --link-color: #8ab4f8;
+    --shadow-color: #fff3;
+    --avatar-bg-color: #cfcfcf;
+    --btn-bg-color: #333;
+    --btn-hover-bg-color: #444;
+    --btn-active-bg-color: #555;
+    --contribution-default-bgColor-0: #333;
+    --light: none;
+    --dark: block;
+  }
+}
+:root[data-theme="light"] {
+  --text-color: #000;
+  --background-color: #fff;
+  --link-color: #006ece;
+  --shadow-color: #0003;
+  --avatar-bg-color: #fff;
+  --btn-bg-color: #f0f0f0;
+  --btn-hover-bg-color: #f6f6f6;
+  --btn-active-bg-color: #f3f3f3;
+  --contribution-default-bgColor-0: var(--btn-hover-bg-color);
+  --light: block;
+  --dark: none;
+}
+:root[data-theme="dark"] {
+  --text-color: #fff;
+  --background-color: #000;
+  --link-color: #8ab4f8;
+  --shadow-color: #fff3;
+  --avatar-bg-color: #cfcfcf;
+  --btn-bg-color: #333;
+  --btn-hover-bg-color: #444;
+  --btn-active-bg-color: #555;
+  --contribution-default-bgColor-0: #333;
+  --light: none;
+  --dark: block;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: MyFont, sans-serif;
+  color: var(--text-color);
+}
+@font-face {
+  font-family: MyFont;
+  src: url(./assets/AaJinRiHuaQing-ChunLanMaoKun.ttf) format("truetype");
+}
+body {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  position: relative;
+}

@@ -1,0 +1,46 @@
+ul.list {
+  width: 100%;
+  margin-top: 2rem;
+}
+ul.list li {
+  border: 1px solid var(--shadow-color);
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+ul.list li:not(:first-child) {
+  margin-top: 1rem;
+}
+ul.list li > a {
+  color: var(--text-color);
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  display: flex;
+}
+ul.list li > a:hover {
+  text-decoration: none;
+}
+ul.list span.dir {
+  flex-basis: 4rem;
+  width: 4rem;
+}
+ul.list span.basename {
+  flex-grow: 1;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+ul.list span.birthtime {
+  align-self: flex-end;
+  font-size: 0.875rem;
+}
+ul.list div.arrow {
+  width: 1.5rem;
+}
+ul.list span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

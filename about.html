@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/root.css" />
+    <link rel="stylesheet" href="/src/main.css" />
+    <title>关于</title>
+    <script type="module" src="/src/components/header/index.js"></script>
+    <link rel="stylesheet" href="/src/assets/style/about.css" />
+  </head>
+  <body>
+    <my-header></my-header>
+    <main class="content">
+      <section>
+        <h2>关于本站</h2>
+        <p>
+          <span>这是一个基于</span>
+          <a href="https://cn.vitejs.dev/">
+            <span>Vite</span>
+            <img src="/favicon.svg" alt="" />
+          </a>
+          <span>+</span>
+          <a href="https://lit.tips/">
+            <span>Lit</span>
+            <img src="/src/assets/img/lit.svg" alt="" />
+          </a>
+          <span> 的ssg博客网站。</span>
+        </p>
+
+        <p>
+          基本思路为: 将build命令替换为node脚本, 先将markdown文件注入html模板,
+          再使用vite打包, 最后注入静态内容。
+        </p>
+
+        <p>
+          虽然Vite的Plugin非常完善, 且RolldownOptions也有对多样化需求的支持,
+          但是学习成本相较于编写node脚本来说较高。
+        </p>
+        <p>故此, 选择以node脚本, 以更灵活的方式实现ssg。</p>
+      </section>
+      <section>
+        <h2>关于我</h2>
+
+        <p>一个初级前端开发, 正在寻找相关工作。</p>
+
+        <p>以 React 18 为主, 虽然有点过时, 但是jsx的写法还是很好用的。</p>
+
+        <p>喜欢尝试新的框架, 比如本站的Lit。</p>
+      </section>
+    </main>
+    <footer>- End -</footer>
+  </body>
+</html>

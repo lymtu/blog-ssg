@@ -1,0 +1,186 @@
+@media (width <= 1024px) {
+    .activity-container {
+      display: none;
+    }
+  }
+
+  .grid-container {
+    border: 1px solid var(--shadow-color);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+
+  .grid-header-wrapper {
+    height: 3rem;
+    position: relative;
+  }
+
+  .grid-header-wrapper:before,
+  .grid-header-wrapper:after {
+    content: "";
+    background: linear-gradient(to right, var(--background-color), transparent);
+    width: 2rem;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .grid-header-wrapper:after {
+    background: linear-gradient(to left, var(--background-color), transparent);
+    left: auto;
+    right: 0;
+  }
+
+  .grid-header {
+    align-items: center;
+    height: 100%;
+    padding: 0 1.25rem;
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .grid-header::-webkit-scrollbar {
+    display: none;
+  }
+
+  .grid-header .scroll-container {
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    display: flex;
+  }
+
+  .grid-header .year-btn {
+    color: var(--text-color);
+    cursor: pointer;
+    border: 1px solid var(--shadow-color);
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: #0000;
+    border-radius: 5px;
+    outline: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .grid-header .year-btn.active,
+  .grid-header .year-btn:hover {
+    background-color: var(--btn-hover-bg-color);
+  }
+
+  .grid-header .year-btn:active {
+    background-color: var(--btn-active-bg-color);
+  }
+
+  .grid-body {
+    width: fit-content;
+    margin-top: 0.5rem;
+  }
+
+  .grid-body .grid-body-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    display: flex;
+  }
+
+  .grid-body-content-wrapper {
+    align-items: center;
+    gap: 0.1rem;
+    display: flex;
+  }
+
+  .grid-body-aside {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    font-size: 0.75rem;
+    display: flex;
+  }
+
+  .grid-body .grid-body-content {
+    grid-template-rows: repeat(7, 12px);
+    grid-auto-columns: 12px;
+    grid-auto-flow: column;
+    gap: 2px;
+    width: 740px;
+    margin: 0.1rem;
+    display: grid;
+  }
+
+  .grid-body .grid-item {
+    cursor: pointer;
+    background-color: var(--contribution-default-bgColor-0);
+    border: 1px solid var(--shadow-color);
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .grid-item[data-activity]:after {
+    content: attr(data-date) "   更改: " attr(data-activity);
+    white-space: pre;
+    color: #fff;
+    text-align: center;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    -o-transition: opacity 0.2s ease, visibility 0.2s;
+    background-color: #000c;
+    border-radius: 4px;
+    min-width: 100px;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 1.4;
+    transition: opacity 0.2s, visibility 0.2s;
+    position: absolute;
+    bottom: 180%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .grid-item[data-activity]:hover:before,
+  .grid-item[data-activity]:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .grid-item[data-activity]:before {
+    content: "";
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    -o-transition: opacity 0.2s ease, visibility 0.2s;
+    border: 5px solid #0000;
+    border-top-color: #000c;
+    transition: opacity 0.2s, visibility 0.2s;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .grid-body .grid-item.color-1 {
+    background-color: var(--contribution-default-bgColor-1);
+  }
+
+  .grid-body .grid-item.color-2 {
+    background-color: var(--contribution-default-bgColor-2);
+  }
+
+  .grid-body .grid-item.color-3 {
+    background-color: var(--contribution-default-bgColor-3);
+  }
+
+  .grid-body .grid-item.color-4 {
+    background-color: var(--contribution-default-bgColor-4);
+  }

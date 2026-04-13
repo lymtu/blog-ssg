@@ -1,0 +1,65 @@
+@import url("@/main.css");
+
+:host {
+  width: 80%;
+  max-width: 772px;
+  display: block;
+  margin: 0 auto !important;
+}
+
+.control-panel {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.control-panel select,
+.control-panel form input,
+.control-panel form button[type="submit"] {
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  height: 2rem;
+  color: var(--text-color);
+  border: 1px solid var(--shadow-color);
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.control-panel select option {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.control-panel form {
+  align-items: center;
+  display: flex;
+}
+
+.control-panel form input {
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  padding: 0 0.5rem;
+}
+
+.control-panel select,
+.control-panel form input {
+  width: 10rem;
+  font-family: MyFont, sans-serif;
+}
+
+.control-panel form button[type="submit"] {
+  -ms-border-radius: 0px 5px 5px 0px;
+  -o-border-radius: 0px 5px 5px 0px;
+  border-radius: 0 5px 5px 0;
+  width: 2rem;
+  padding: 0.25rem;
+  display: block;
+}
