@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/index.js",
+    "prebuild": "node scripts/prebuild/index.js",
+    "build": "node scripts/build/index.js",
     "preview": "vite preview"
   },
   "devDependencies": {

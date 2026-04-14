@@ -1,3 +1,9 @@
+@import url("/AaJinRiHuaQing-ChunLanMaoKun/result.css");
+
+*{
+  font-family: "Aa今日花晴 春懒猫困", sans-serif !important;
+}
+
 .dark {
   display: var(--dark);
 }
