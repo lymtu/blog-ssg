@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-scripts/prebuild
+scripts/generate
 src/markdown
 
 # Editor directories and files
