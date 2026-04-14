@@ -1,13 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
-import readline from "readline/promises";
 
 const root = process.cwd();
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
 
 const pathConversion = async (config = {}) => {
   const {
@@ -23,15 +17,8 @@ const pathConversion = async (config = {}) => {
   });
 
   const rmDirPath = path.join(outputDirAbs, removeDir);
-  const answer = await rl.question(
-    `是否删除构建历史目录: "${rmDirPath}" ? (y/n) `,
-  );
-  rl.close();
-
-  if (answer === "y") {
-    await fs.rm(rmDirPath, { recursive: true, force: true });
-    console.log(`已删除 ${rmDirPath}。`);
-  }
+  await fs.rm(rmDirPath, { recursive: true, force: true });
+  console.log(`已删除 ${rmDirPath}。`);
 };
 
 export default pathConversion;

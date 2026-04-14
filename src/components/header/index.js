@@ -1,6 +1,10 @@
 import { html, LitElement, unsafeCSS } from "lit";
 
+import ThemeStyleInline from './toggleThemeBtn.css?inline'
 import StyleInline from "./style.css?inline";
+import OSSvgInline from "@/assets/img/os.svg?inline";
+import SunSvgInline from "@/assets/img/sun.svg?inline";
+import MoonSvgInline from "@/assets/img/moon.svg?inline";
 
 class ThemeToggler extends LitElement {
   static properties = { theme: { type: `light` } };
@@ -59,13 +63,18 @@ class ThemeToggler extends LitElement {
     return html`
       <button class="toggleBtn" @click=${this._toggleTheme}>
         <img
-          src=${this.theme === `light` ? fe : this.theme === `dark` ? pe : me}
+          src=${this.theme === `light`
+            ? SunSvgInline
+            : this.theme === `dark`
+              ? MoonSvgInline
+              : OSSvgInline}
           alt="theme"
         />
       </button>
     `;
   }
-  static styles = a(he);
+
+  static styles = unsafeCSS(ThemeStyleInline);
 }
 
 window.customElements.define(`theme-toggler`, ThemeToggler);
@@ -99,11 +108,12 @@ class Header extends LitElement {
               { path: `/archive`, name: `归档` },
               { path: `/about`, name: `关于` },
             ].map(
-              (e) => html`<a
-                href="${e.path}"
-                class="${window.location.pathname === e.path ? `active` : ``}"
-                >${e.name}</a
-              >`,
+              (e) =>
+                html`<a
+                  href="${e.path}"
+                  class="${window.location.pathname === e.path ? `active` : ``}"
+                  >${e.name}</a
+                >`,
             )}
           </nav>
         </div>
